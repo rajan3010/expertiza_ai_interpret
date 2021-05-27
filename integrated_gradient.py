@@ -1,6 +1,7 @@
 import numpy as np
 from tqdm import tqdm
 
+#rename the package based on the subfolder while pulling
 from saliency_interpreter import SaliencyInterpreter
 
 

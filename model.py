@@ -1,6 +1,6 @@
 import torch
 from torch import nn
-from transformers import DistilBertModel
+from transformers import DistilBertForSequenceClassification
 
 
 class DistilBertForSequenceClassification(nn.Module):
@@ -10,7 +10,7 @@ class DistilBertForSequenceClassification(nn.Module):
         self.num_labels = num_labels
         self.config = config
         self.bert = DistilBertModel.from_pretrained(
-            'distilbert-base-uncased',
+            'distilbert-base-uncased-finetuned-sst-2-english',
             output_hidden_states=False
         )
         self.dropout = nn.Dropout(config.dropout)
