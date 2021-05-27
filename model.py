@@ -15,6 +15,8 @@ class DistilBertForSequenceClassification(nn.Module):
         )
         self.dropout = nn.Dropout(config.dropout)
         self.classifier = nn.Linear(config.hidden_size, num_labels)
+        #torch.manual_seed(500)
+        torch.manual_seed(786) #for initializing the same weights each time
         nn.init.xavier_normal_(self.classifier.weight)
 
     def forward(self, input_ids, token_type_ids=None, attention_mask=None):
