@@ -1,6 +1,6 @@
 import torch
 from torch import nn
-from transformers import DistilBertForSequenceClassification
+from transformers import DistilBertModel
 
 
 class DistilBertForSequenceClassification(nn.Module):
