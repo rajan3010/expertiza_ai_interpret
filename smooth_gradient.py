@@ -3,7 +3,7 @@ import torch
 from tqdm import tqdm
 
 #rename the package based on the subfolder while pulling
-from saliency_interpreter import SaliencyInterpreter
+from Interpret.saliency_interpreter import SaliencyInterpreter
 
 
 class SmoothGradient(SaliencyInterpreter):
